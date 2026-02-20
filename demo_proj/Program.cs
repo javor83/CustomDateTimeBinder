@@ -4,7 +4,7 @@ using demo_proj.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews().AddMvcOptions
+builder.Services.AddControllersWithViews
     
     (
         options =>
