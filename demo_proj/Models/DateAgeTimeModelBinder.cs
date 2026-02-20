@@ -6,11 +6,12 @@ namespace demo_proj.Models
     public class DateAgeTimeModelBinder : IModelBinder
     {
         private readonly string _dateFormat;
+        //********************************************************************
         public DateAgeTimeModelBinder(string dateFormat)
         {
             this._dateFormat = dateFormat;
         }
-
+        //********************************************************************
         Task IModelBinder.BindModelAsync(ModelBindingContext bindingContext)
         {
             ValueProviderResult valueResult = bindingContext.ValueProvider.GetValue(bindingContext.ModelName);
@@ -42,5 +43,6 @@ namespace demo_proj.Models
             }
             return Task.CompletedTask;
         }
+        //********************************************************************
     }
 }

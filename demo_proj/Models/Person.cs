@@ -8,5 +8,8 @@ namespace demo_proj.Models
     {
         [Required]
         public DateTime pAge { get; set; }
+
+        [Required]
+        public string PName { get; set; }
     }
 }

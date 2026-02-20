@@ -11,8 +11,9 @@
 @model Person
 <form method="post" asp-action="Index" asp-antiforgery="true" asp-controller="Home">
     <div asp-validation-summary="All"></div>
-    <input type="text" asp-for="@Model.pAge" />
-    <input type="submit" value="OK !"/>
+    Name<input asp-for="@Model.PName" type="text" /><br/>
+    Age<input type="text" asp-for="@Model.pAge" /><br/>
+    <input type="submit" value="Post custom binder"/>
 </form>
 
 

@@ -12,7 +12,8 @@ namespace demo_proj.Controllers
         {
             Person p = new Person()
             {
-                pAge = DateTime.Now
+                pAge = DateTime.Now,
+                PName = "yavor"
             };
             return View(p);
         }
