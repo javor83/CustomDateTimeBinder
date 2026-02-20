@@ -23,7 +23,8 @@ namespace demo_proj.Models
                 ArgumentException.ThrowIfNullOrEmpty(nameof(context));
             }
             
-            var x = context.Metadata.ModelType;
+            var x = context.Metadata.ModelType;//типът е Post object типа-
+            //изпращаме Person, следователно context.Metadata.ModelType = Person type
             if (x == typeof(DateTime) || x == typeof(DateTime?))
             {
                 return new DateAgeTimeModelBinder(this._dateFormat);
