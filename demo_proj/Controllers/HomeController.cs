@@ -13,7 +13,9 @@ namespace demo_proj.Controllers
             Person p = new Person()
             {
                 pAge = DateTime.Now,
-                PName = "yavor"
+                PName = "yavor",
+                Smoke =false,
+                Age = 10
             };
             return View(p);
         }

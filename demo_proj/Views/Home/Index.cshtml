@@ -12,7 +12,10 @@
 <form method="post" asp-action="Index" asp-antiforgery="true" asp-controller="Home">
     <div asp-validation-summary="All"></div>
     Name<input asp-for="@Model.PName" type="text" /><br/>
-    Age<input type="text" asp-for="@Model.pAge" /><br/>
+    DateLocal<input type="text" asp-for="@Model.pAge" /><br/>
+    Age<input type="text" asp-for="@Model.Age" />
+    <input type="checkbox" asp-for="@Model.Smoke" />Smoke?!
+
     <input type="submit" value="Post custom binder"/>
 </form>
 

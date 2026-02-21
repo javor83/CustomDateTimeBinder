@@ -11,5 +11,13 @@ namespace demo_proj.Models
 
         [Required]
         public string PName { get; set; }
+
+
+        [Required]
+        [CanSmoke(nameof(Person.Smoke))]
+        public int Age { get; set; }
+
+        [Required]
+        public bool Smoke { get; set; }
     }
 }
