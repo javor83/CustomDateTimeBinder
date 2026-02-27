@@ -21,6 +21,8 @@ namespace demo_proj.Controllers
             };
             return View(p);
         }
+
+
         //**********************************************************************
         [HttpPost,ValidateAntiForgeryToken]
         public IActionResult Index(Person sender)

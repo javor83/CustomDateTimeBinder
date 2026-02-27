@@ -33,7 +33,16 @@ namespace demo_proj.Models
             }
             return string.Join(",", this.Grades);
         }
-        
+
+
+        public string Caption()
+        {
+            if(this.PointCards==null)
+            {
+                return "";
+            }else
+                return this.PointCards.Caption();
+        }
         //************************************************************************************
         [Required]
         public PointCards? PointCards { get; set; }

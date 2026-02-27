@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews
         options =>
         {
             options.ModelBinderProviders.Insert(0, new StringListModelBinderProvider());
+            options.ModelBinderProviders.Insert(1, new PointListModelBinderProvider());
         }
     );
 
