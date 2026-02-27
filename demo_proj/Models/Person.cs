@@ -19,5 +19,14 @@ namespace demo_proj.Models
 
         [Required]
         public bool Smoke { get; set; }
+
+        public string[] Grades { get; set; } = new string[] { "A","B","C"};
+
+        public string JoinGrades()
+        {
+            return string.Join(",", this.Grades);
+        }
+
+        public PointCards PointCards { get; set; } = new PointCards() { X = 10, Y = 20 };
     }
 }
