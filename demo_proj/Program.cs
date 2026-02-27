@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews
     (
         options =>
         {
-            
+            options.ModelBinderProviders.Insert(0, new StringListModelBinderProvider());
         }
     );
 

@@ -22,6 +22,10 @@ namespace demo_proj.Models
             if (string.IsNullOrEmpty(point_value) == false)
             {
                 int pos_y = point_value.IndexOf('Y');
+                if(pos_y == -1)
+                {
+                    return null;
+                }
                 string y_value = point_value.Substring(pos_y + 1);
                 string x_value = point_value.Substring(1, pos_y - 1);
                 result = new PointCards()
@@ -38,7 +42,7 @@ namespace demo_proj.Models
         //********************************************************************************
         public static string[] CommaList(string? comma_list)
         {
-            string[] result = new string[] { };
+            string[] result = null;
 
 
             if (string.IsNullOrEmpty(comma_list) == false)

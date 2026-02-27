@@ -15,7 +15,9 @@ namespace demo_proj.Controllers
                 pAge = DateTime.Now,
                 PName = "yavor",
                 Smoke =false,
-                Age = 10
+                Age = 10,
+                Grades = new string[] { "A", "B1", "C1" },
+                PointCards =  new PointCards() { X = 10, Y = 20 }
             };
             return View(p);
         }

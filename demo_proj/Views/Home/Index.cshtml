@@ -1,12 +1,6 @@
 ﻿
-@{
-    ViewData["Title"] = "Home Page";
-}
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
 
 @model Person
 <form method="post" asp-action="Index" asp-antiforgery="true" asp-controller="Home">
@@ -16,6 +10,10 @@
     Age<input type="text" asp-for="@Model.Age" />
     <input type="checkbox" asp-for="@Model.Smoke" />Smoke?!
 
+    Grades<input type="text" asp-for="@Model.Grades" value="@Model.JoinGrades()"/><br/>
+    Point <input type="text" asp-for="@Model.PointCards" value="@Model.PointCards.Caption()"/>
+    
+
     <input type="submit" value="Post custom binder"/>
 </form>
 
@@ -23,7 +21,7 @@
 @section divsec
 {
     <div class="text-center">
-        <h1 class="display-4"><b>This is a section DEIV</b></h1>
+        <h1 class="display-4"><b>This is a section</b></h1>
     </div>
 }
 
