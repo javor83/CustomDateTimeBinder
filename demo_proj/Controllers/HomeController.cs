@@ -6,7 +6,12 @@ namespace demo_proj.Controllers
 {
     public class HomeController : Controller
     {
-
+        [Route("Home/NotFound")]
+        public IActionResult NotFound(int statusCode)
+        {
+            // You can log the specific URL that failed here if needed
+            return View();
+        }
         //**********************************************************************
         public IActionResult Index()
         {

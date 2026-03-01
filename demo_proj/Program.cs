@@ -31,6 +31,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseStatusCodePagesWithReExecute("/Home/NotFound", "?statusCode={0}");
+
 app.MapStaticAssets();
 
 app.MapControllerRoute(
