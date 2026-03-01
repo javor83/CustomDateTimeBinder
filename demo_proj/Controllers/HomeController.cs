@@ -9,7 +9,7 @@ namespace demo_proj.Controllers
         [Route("Home/NotFound")]
         public IActionResult NotFound(int statusCode)
         {
-            // You can log the specific URL that failed here if needed
+           
             return View();
         }
         //**********************************************************************
@@ -24,7 +24,10 @@ namespace demo_proj.Controllers
                 Grades = new string[] { "A", "B1", "C1" },
                 PointCards =  new PointCards() { X = 10, Y = 20 }
             };
+
+            throw new Exception("test excpe");
             return View(p);
+           
         }
 
 
@@ -32,12 +35,15 @@ namespace demo_proj.Controllers
         [HttpPost,ValidateAntiForgeryToken]
         public IActionResult Index(Person sender)
         {
+           
+            
             if (ModelState.IsValid)
             {
                 return Json(sender);
             }
             else
                 return View(sender);
+            
         }
         //**********************************************************************
 
