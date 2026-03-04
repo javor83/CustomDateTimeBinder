@@ -25,7 +25,7 @@ namespace demo_proj.Controllers
                 PointCards =  new PointCards() { X = 10, Y = 20 }
             };
 
-            throw new Exception("test excpe");
+            //throw new Exception("test excpe");
             return View(p);
            
         }
